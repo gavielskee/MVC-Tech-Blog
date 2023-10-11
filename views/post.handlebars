@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{description}}</p>
+  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+
+  {{!-- COMMENTS GO HERE --}}
+  <section>
+    <h2>Comments</h2>
+    {{#each comments}}
+    <h5>{{commentBody}}</h5>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+    {{/each}}
+    <input placeholder="Comment..." class="commentInput" />
+    <button class="commentBtn">Submit</button>
+  </section>
+</div>
+
+<script src="/js/comment.js"></script>
